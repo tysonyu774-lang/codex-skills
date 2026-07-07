@@ -1,6 +1,6 @@
 # Codex Skills
 
-这是一个个人 Codex skills 仓库，用于分享可安装到 Codex 的自定义技能。
+Tyson的 Codex skills 仓库，用于分享可安装到 Codex 的自定义技能。
 
 ## ads-monthly-report
 
@@ -36,13 +36,13 @@
 ## 使用方法
 
 ```text
-用 $ads-monthly-report 分析这份 Meta / Google Ads 月数据，输出客户版 HTML 月报。
+用 $ads-monthly-report 分析这份 Meta / Google Ads 月数据，输出 HTML 月报。
 ```
 
 也可以先输出人工可修改草稿：
 
 ```text
-用 $ads-monthly-report 分析这份广告数据，先输出适合复制到 Mac 备忘录修改的中文月报草稿。
+用 $ads-monthly-report 分析这份广告数据，先输出适合复制到 Mac 备忘录/word修改的中文月报草稿。
 ```
 
 修改后再生成最终 HTML：
