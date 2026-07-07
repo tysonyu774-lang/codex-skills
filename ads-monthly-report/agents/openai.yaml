@@ -1,0 +1,7 @@
+interface:
+  display_name: "Ads Monthly Report"
+  short_description: "生成 Meta/Google 广告月报 HTML"
+  brand_color: "#2563EB"
+  default_prompt: "Use $ads-monthly-report to analyze my Meta and Google Ads monthly exports and generate a client-ready HTML report."
+policy:
+  allow_implicit_invocation: true
