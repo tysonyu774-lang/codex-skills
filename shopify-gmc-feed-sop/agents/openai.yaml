@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shopify GMC Feed SOP"
+  short_description: "Shopify 产品同步 GMC 的标题与描述优化 SOP"
+  default_prompt: "Use $shopify-gmc-feed-sop to audit and rewrite Shopify product feed titles, descriptions, SEO fields, and GMC labels for Google Merchant Center."
