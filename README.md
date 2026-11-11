@@ -30,6 +30,10 @@ Tyson的 Codex skills 仓库，用于分享可安装到 Codex 的自定义技能
 - `custom_label_0-4` 拆分和规范
 - 商品落地页一致性检查
 
+## shopify-review-importer
+
+`shopify-review-importer`（Shopify Review Bridge）将获准复用、确认同款的评论整理为 Loox / Judge.me CSV，提供安全预览、问题清单和本地去重台账。支持 JSON/CSV 及保存页面处理；Amazon/Wayfair 自动采集、真实店铺导入仍待验证。详见 [使用说明](shopify-review-importer/README.md)。
+
 ## 安装方法
 
 1. 下载本仓库。
