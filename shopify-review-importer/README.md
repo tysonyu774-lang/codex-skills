@@ -24,7 +24,7 @@ python3 -m unittest discover -s tests -v
 
 真实探测 Amazon B00006IEEU 产品页面可读，但未找到 review-image-tile，因此“评论→对应买家图片”未验证；Wayfair Brittany sofa mcll1082 链接被读取工具报告不可访问，未取得评论。没有配置获准的数据提供商或登录店铺；无法宣称链接采集、图片可访问性或最终入库已验证。未对平台使用条款完成确认，启用采集前应核对所选读取方式及复用权限。
 
-目标仓库已确认： https://github.com/tysonyu774-lang/codex-skills 。技能放在根目录 shopify-review-importer/，真实数据和会话仅存放忽略的 runs/。
+目标仓库已确认： https://github.com/tysoncommerce/codex-skills 。技能放在根目录 shopify-review-importer/，真实数据和会话仅存放忽略的 runs/。
 
 ## 网站介绍文案
 
