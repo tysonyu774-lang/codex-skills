@@ -1,0 +1,8 @@
+{
+  "showcase_site": "https://tysoncommerce.com/",
+  "plugin": "judgeme",
+  "reuse_authorized": false,
+  "published": false,
+  "target": {"store": "example.myshopify.com", "product_id": "", "handle": "example"},
+  "mappings": {}
+}

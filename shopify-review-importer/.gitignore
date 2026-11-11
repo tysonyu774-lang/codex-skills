@@ -1,0 +1,5 @@
+runs/
+*.sqlite3
+__pycache__/
+.env*
+config.local.json
