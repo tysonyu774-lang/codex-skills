@@ -1,79 +1,64 @@
-# Codex Skills
+# TysonCommerce Skills
 
-Tyson的 Codex skills 仓库，用于分享可安装到 Codex 的自定义技能。
+面向 Shopify 商家和数字营销团队的实用 AI 技能。官网：[tysoncommerce.com](https://tysoncommerce.com/) · GitHub：[tysoncommerce](https://github.com/tysoncommerce)
 
-## ads-monthly-report
+## 按用途选择
 
-`ads-monthly-report` 用于分析 Meta Ads / Google Ads 月度广告数据，并输出客户可读的广告月报、素材分析、优化建议和专业 HTML 报告。
+| 分类 | 技能 | 用途与输出 | 状态 |
+|---|---|---|---|
+| 广告分析与报告 | [ads-monthly-report](ads-monthly-report/SKILL.md) | 分析 Meta / Google Ads 月度数据，输出可修改中文草稿、素材分析、预算建议与 HTML 月报 | 已收录 |
+| Shopify 商品与 Feed | [shopify-gmc-feed-sop](shopify-gmc-feed-sop/SKILL.md) | 审核产品数据，整理 GMC / Shopping / PMax 标题、描述、URL、分类与 custom labels | 已收录 |
+| Shopify 评论管理 | [shopify-review-importer](https://github.com/tysoncommerce/codex-skills/pull/1) | 整理获准复用的评论，生成 Loox / Judge.me CSV、预览及问题清单 | 草稿 PR；尚未合并 |
 
-适用场景：
+“已收录”表示技能已在主分支，不代表对所有店铺或数据完成真实验证。评论工具当前支持文件准备与保存页面解析；Amazon / Wayfair 自动采集及真实店铺导入仍待验证。
 
-- Meta Ads 月度数据复盘
-- Google Ads 月度数据复盘
-- Meta + Google 混合广告月报
-- 广告系列表现分析
-- 素材优缺点分析
-- 下月预算和优化建议
-- 客户版 HTML 报告生成
+## 安装
 
-## shopify-gmc-feed-sop
-
-`shopify-gmc-feed-sop` 用于把 Shopify 产品资料整理成适合 Google Merchant Center / Google Shopping / PMax 使用的 feed 字段，并检查标题、描述、SEO、URL、标签、GMC 分类和 custom labels。
-
-适用场景：
-
-- Shopify 产品导出表审核
-- Google GMC feed 标题和描述优化
-- Google Shopping / PMax 商品分组准备
-- 产品标题、SEO Title、Meta Description 改写
-- Google Product Category 检查
-- `custom_label_0-4` 拆分和规范
-- 商品落地页一致性检查
-
-## 安装方法
-
-1. 下载本仓库。
-2. 将你需要的 skill 文件夹复制到你的 Codex skills 目录：
-
-```text
-~/.codex/skills/
-```
-
-3. 确认最终路径类似：
+下载本仓库，将所需技能文件夹复制到本机的 Codex 技能目录：
 
 ```text
 ~/.codex/skills/ads-monthly-report/SKILL.md
 ~/.codex/skills/shopify-gmc-feed-sop/SKILL.md
 ```
 
-4. 重启 Codex 或开启新对话。
+重新开启对话；若未发现技能，重启应用。评论技能目前需从 feat/shopify-review-importer 分支获取，先阅读其使用说明。
 
-## 使用方法
-
-```text
-用 $ads-monthly-report 分析这份 Meta / Google Ads 月数据，输出 HTML 月报。
-```
-
-也可以先输出人工可修改草稿：
+也可以在支持技能安装的对话中发送：
 
 ```text
-用 $ads-monthly-report 分析这份广告数据，先输出适合复制到 Mac 备忘录/word修改的中文月报草稿。
+帮我安装 https://github.com/tysoncommerce/codex-skills 中的 ads-monthly-report 技能。
 ```
 
-修改后再生成最终 HTML：
+本仓库分发技能文件，尚未提供独立的一键安装插件。
+
+## 对话使用示例
+
+### 广告分析与报告
 
 ```text
-用 $ads-monthly-report 根据这份我修订后的月报终稿，生成专业营销公司风格 HTML 报告。
+用 $ads-monthly-report 分析这份 Meta / Google Ads 月数据，先输出可修改的中文月报草稿。
 ```
 
-Shopify GMC feed SOP：
+人工修订后：
 
 ```text
-用 $shopify-gmc-feed-sop 检查这份 Shopify 产品导出表，输出适合 Google GMC feed 的标题、描述、URL、custom labels 和问题清单。
+用 $ads-monthly-report 根据这份修订终稿生成专业 HTML 月报。
 ```
 
-## 注意
+### Shopify 商品与 Feed
 
-- 不要把客户数据、广告账号截图、API key、广告后台导出原始文件提交到这个仓库。
-- 这个仓库只保存通用 skill 文件。
-- 如果你更新了字段映射、报告结构或 feed SOP 规则，重新提交并推送即可。
+```text
+用 $shopify-gmc-feed-sop 检查这份 Shopify 产品导出表，整理 GMC 标题、描述、URL、custom labels 和问题清单。
+```
+
+### Shopify 评论管理（草稿版）
+
+```text
+用 $shopify-review-importer 整理这份评论文件，关联到我指定的 Shopify 商品，生成 Judge.me 待审导入文件。
+```
+
+## 仓库组织与数据边界
+
+每个技能保留独立根目录，以 SKILL.md 作为入口；按用途在本页分类，保持已有安装路径。脚本、参考资料和测试放在各自技能内。私有 shopify-daily-report-agent 是独立应用，不属于本技能目录。
+
+仅提交通用代码、说明与明确标注的合成测试。客户数据、真实评论、截图、图片、登录会话、密钥和后台原始导出不进入仓库。店铺操作需要对应授权；生成文件不等于导入成功。
